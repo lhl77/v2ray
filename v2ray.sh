@@ -131,7 +131,7 @@ create_vmess_URL_config() {
 		cat >/etc/v2ray/vmess_qr.json <<-EOF
 		{
 			"v": "2",
-			"ps": "${_site}_${domain}",
+			"ps": "自建_${domain}",
 			"add": "${domain}",
 			"port": "443",
 			"id": "${v2ray_id}",
@@ -148,7 +148,7 @@ create_vmess_URL_config() {
 		cat >/etc/v2ray/vmess_qr.json <<-EOF
 		{
 			"v": "2",
-			"ps": "${_site}_${ip}",
+			"ps": "自建_${ip}",
 			"add": "${ip}",
 			"port": "${v2ray_port}",
 			"id": "${v2ray_id}",
@@ -164,7 +164,7 @@ create_vmess_URL_config() {
 			cat >/etc/v2ray/vmess_qrv6.json <<-EOF
 			{
 				"v": "2",
-				"ps": "${_site}_${v6ip}",
+				"ps": "自建_${v6ip}",
 				"add": "${ip}",
 				"port": "${v2ray_port}",
 				"id": "${v2ray_id}",
@@ -2443,8 +2443,6 @@ get_v2ray_config() {
 				echo
 				echo -e "${yellow} HTTP 监听端口 = ${cyan}6666$none"
 				echo
-				echo "V2Ray 客户端使用教程: https://${_site}/post/4/"
-				echo
 				break
 			else
 				error
@@ -2521,8 +2519,7 @@ create_v2ray_config_text() {
 	fi
 	echo "---------- END -------------"
 	echo
-	echo "V2Ray 客户端使用教程: https://${_site}/post/4/"
-	echo
+	get_v2ray_config_info_link
 }
 get_v2ray_config_info_link() {
 	echo
@@ -2536,8 +2533,6 @@ get_v2ray_config_info_link() {
 		echo "---------- V2Ray 配置信息链接-------------"
 		echo
 		echo -e "$yellow 链接 = $cyan$link$none"
-		echo
-		echo -e " V2Ray 客户端使用教程: https://${_site}/post/4/"
 		echo
 		echo "备注...链接将在 14 天后失效..."
 		echo
