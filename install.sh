@@ -1000,6 +1000,7 @@ _install() {
 	get_ip
 	config
 	show_config_info
+    get_v2ray_vmess_URL_link
 }
 
 _uninstall() {

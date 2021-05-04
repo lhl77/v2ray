@@ -91,7 +91,7 @@ jq_patchback() {
 
 jq_printvmess() {
     local ADDRESS=${1:-SERVER_IP}
-    local _MAKPREFIX=${2:-233}
+    local _MAKPREFIX=${2:-自建}
     local INPUT=$TMP_ORIG_JSON
     [[ -s $TMP_UPDT_JSON ]] && INPUT=$TMP_UPDT_JSON
 
